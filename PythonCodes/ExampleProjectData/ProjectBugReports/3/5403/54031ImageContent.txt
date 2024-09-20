@@ -1,0 +1,60 @@
+Options
+
+Search Options (Ctrl+E)
+
+    Environment
+    Projects and Solutions
+    Source Control
+    Work Items
+    Text Editor
+    Debugging
+        General
+        Just-In-Time
+        Output Window
+        Symbols
+    Performance Tools
+    Azure Data Lake
+    Azure Dev Spaces Tools
+    Azure Service Authentication
+    Container Tools
+    Cross Platform
+    Data Tools
+    Database Tools
+    F# Tools
+    IntelliCode
+    Live Share
+    NuGet Package Manager
+    Office Tools
+    Office Tools (Web)
+    Python Tools
+    SQL Server Tools
+    Test
+    Test Window
+    Web Forms Designer
+    Web Performance Test Tools
+    Windows Forms Designer
+    Workflow Designer
+    Xamarin
+    XAML Designer
+
+General
+
+[ ] Ask before deleting all breakpoints
+[ ] Break all processes when one process breaks
+[ ] Break when exceptions cross AppDomain or managed/native boundaries (Managed only)
+[ ] Enable address-level debugging
+[ ] Enable .NET Framework source stepping
+[ ] Show parallel stacks diagram bottom-up
+[ ] Ignore GPU memory access exceptions if the data written didn't change the value
+[ ] Use Managed Compatibility Mode
+[ ] Enable legacy C# and VB expression evaluators
+[ ] Warn when using custom debugger visualizers against potentially unsafe processes (Managed only)
+[ ] Enable Windows debug heap allocator (Native only)
+[ ] Enable UI Debugging Tools for XAML
+    [ ] Preview selected elements in Live Visual Tree
+    [ ] Show runtime tools in application
+    [ ] Enable XAML Hot Reload
+    [ ] Enable Just My XAML
+[ ] Turn off selection mode when an element is selected
+[ ] Enable Diagnostic Tools while debugging
+[ ] Show elapsed time PerfTip while debugging

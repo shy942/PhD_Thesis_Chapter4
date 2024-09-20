@@ -1,0 +1,17 @@
+* Your Abp package version : v3.7.2
+* Your base framework:  Net Core 2.1.
+
+### Step
+Use any Repository,then call the FirstOrDefaultAsync(TPrimaryKey id) or FirstOrDefault(TPrimaryKey id) method **many times** with **different id**.
+### Result
+In my application.a service call the FirstOrDefaultAsync(Guid id) for about 55k times in two days. the application took about 1GB memory.
+### Reason
+I use the memory profile tool to check the dump file. I found ef cache the different query plan many times.
+![image](https://user-images.githubusercontent.com/238598/51577514-13d41e00-1ef5-11e9-9f85-a4f53f36ed4a.png)
+Then I found https://github.com/aspnet/EntityFrameworkCore/issues/10535#issuecomment-375116203 explan the reason.
+Then I check the abp source code,https://github.com/aspnetboilerplate/aspnetboilerplate/blob/cb0626b58670e123787c7884aafb3758fb6e3ba6/src/Abp/Domain/Repositories/AbpRepositoryBase.cs#L262
+It creates different Expression with different id.
+
+### How to fix it
+I switch to call the FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate) method.the memory leak was gone.
+But I think we need change the CreateEqualityExpressionForId method to create a same expression with same entity but different ids.

@@ -1,0 +1,57 @@
+### Background
+
+Sometimes we need to show a message to the user and shortcut the code flow, but don't want to throw a `UserFriendlyException` (because it rollbacks the transaction). For such cases, we can develop an alert system so we can add alert messages to a collection which is then rendered on the UI.
+
+This is for full page gets/posts, not for API calls (since alerts are UI specific stuff).
+
+### Example usage on a razor page
+
+````C#
+public  async Task<IActionResult> OnPostAsync()
+{
+    var result = await SignInManager.PasswordSignInAsync(
+        Input.UserNameOrEmailAddress,
+        Input.Password,
+        Input.RememberMe,
+        true
+    );
+
+    if (result.IsLockedOut)
+    {
+        Alerts.Warning(L["UserLockedOutMessage"]); //A warning message
+        return Page();
+    }
+
+    if (!result.Succeeded)
+    {
+        Alerts.Danger(L["InvalidUserNameOrPassword"]); //A danger/error message
+        return Page();
+    }
+
+    return Redirect(ReturnUrl);
+}
+````
+
+### Example UI:
+
+![image](https://user-images.githubusercontent.com/1210527/40611651-e51c7c1a-627f-11e8-8130-c13ae34d4f4b.png)
+
+### IAlertManager
+
+````C#
+public interface IAlertManager
+{
+    AlertList Alerts { get; }
+}
+````
+
+The implementation should be registered as `scoped` (per request).
+
+### Alert Message
+
+Can contain these properties:
+
+* Text (string - required)
+* Title (string)
+* Type (Enum: Warning, Info, Success...)
+* Dismissable (boolean)

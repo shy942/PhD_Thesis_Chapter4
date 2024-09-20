@@ -1,0 +1,17 @@
+0 个引用| zchhaemgg；127 天前 | 名作者；1 项更改
+protected override void Application_Start(object sender, EventArgs e)
+{
+    AbpBootstrapper.IocManager.IocContainer.AddFacility<LoggingFacility>(
+        f => f.UseAbpLog4Net().WithConfig(Server.MapPath("log4net.config"))
+    );
+    base.Application_Start(sender, e);
+}
+
+快速监视
+
+表达式(E):
+    Server.MapPath("log4net.config")
+
+值(V):
+    名称                                                     值
+    Server.MapPath("log4net.config")   "D:\\Dilrba\\aspnetboilerplate\\src\\Abdp.Sample.Web\\log4net.config"

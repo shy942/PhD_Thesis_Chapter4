@@ -1,0 +1,10 @@
+Dears,
+All of my integration tests got broken after upgrade from version 5.5.0 to latest version 7.0.0
+After debugging my tests, I can see the root cause of the issue is this line:-
+    `protected virtual void SetCreationAuditProperties(object entityAsObj, long? userId) => EntityAuditingHelper.SetCreationAuditProperties(this.MultiTenancyConfig, entityAsObj, this.AbpSession.TenantId, userId, this.CurrentUnitOfWorkProvider?.Current?.AuditFieldConfiguration);`
+in automation tests, **CurrentUnitOfWorkProvider?.Current** is null so, the **auditFields** of type **IReadOnlyList<AuditFieldConfiguration>** will be null and that break all of my tests. This was working properly before upgrade
+@ismcagdas @ryancyq @maliming @demirmusa  @acjh 
+Appreciate your quick action as we have urgent deadline
+![image](https://user-images.githubusercontent.com/6592222/145310947-38b51d48-225c-468c-a79e-9cdf3834548c.png)
+
+

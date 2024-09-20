@@ -1,0 +1,42 @@
+Hi guys,
+
+I'am having an intermittent issue where `AbpSession.TenantId` is not set, even thought that client is sending the correct TenantId per request. 
+
+code behind GetItem:
+
+```csharp
+public async Task<AdDto> GetItem(GetAdInput input)
+        {
+            var culture = await _applicationLanguageRepository.GetCultureAsync(AbpSession.TenantId);
+
+            var sessionId = Extensions.GetGuid(input.SessionId);
+
+            var ad = await _adRepository.SingleOrDefaultAsync(input.AdId, sessionId, AbpSession.UserId, input.IsEdit, culture.TwoLetterISOLanguageName);
+
+            if (ad == null)
+            {
+                throw new UserFriendlyException("There is no such an ad.");
+            }
+
+            if (ad.TenantId != AbpSession.TenantId && ad.TenantId.HasValue)
+            {
+                throw new UserFriendlyException("Tenant session is not valid.");
+            }
+
+            if (ad.Status == AdStatus.Active)
+            {
+                ad.Slug = ad.Title.GenerateSlug();
+            }
+
+            var adOutput = ad.MapTo<AdDto>();
+}
+```
+
+As you can see in the image below that the first request for `GetItem?AdId=1000021352&isEdit=false` was succeed without error but the second request failed with the error `Tenant session is not valid`
+
+![image](https://user-images.githubusercontent.com/6113947/47628365-38566f00-db2d-11e8-9fe4-0c850676c6c5.png)
+
+Abp version: `V4.0.0`
+Template base: `.Net Framework`
+
+Thanks
