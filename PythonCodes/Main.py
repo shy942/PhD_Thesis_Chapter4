@@ -2,6 +2,7 @@
 import os
 from ReadFile import read_file
 from Preprocessor import preprocess_text
+from ContentTypeChecker import contentCheck
 
 # folder where all projects containing bug reports are stored
 project_bug_reports_root = "./ExampleProjectData/ProjectBugReports/"
@@ -31,11 +32,13 @@ def collectType(bug_report_path):
     title_path = os.path.join(bug_report_path, 'title.txt')
     description_path = os.path.join(bug_report_path, 'description.txt')
     title = read_file(title_path)
-    print(title)
+    #print(title)
     print('Pre-procesed Title ------------------------------------------------------')
     preprocessed_title=preprocess_text(title, False)
     print(preprocessed_title)
     description = read_file(description_path)
+    type=contentCheck(description)
+    print('Description type is: ', type)
     #print(description)
     #Process Title
      
