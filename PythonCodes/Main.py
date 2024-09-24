@@ -37,26 +37,23 @@ def collectType(bug_report_path):
     preprocessed_title=preprocess_text(title, False)
     print(preprocessed_title)
     description = read_file(description_path)
+    #Check the Type of Description ST,PE or NL
     type=contentCheck(description)
-    print('Description type is: ', type)
+    print('Type of description is: ', type)
     #print(description)
-    #Process Title
-     
-    #Check the Type of Description
-
-    #Process Accordingly
-    #ST
-    #PE
-    #NL
-
-    #Check the Type of Image Content (s)
-
-    #Process Accordingly
-    #ST
-    #PE
-    #NL
-    print('Main Manager')
-
+    
+    #Image Content
+    image_content_all = '';
+    files = sorted(os.listdir(bug_report_path))
+    for file_name in files:
+        if "ImageContent.txt" in file_name:
+            file_path = os.path.join(bug_report_path, file_name)
+            file_content = read_file(file_path)
+            image_content_all += file_content + "\n"
+    #print(image_content_all)
+    #Check the Type of Image-Conent-all ST,PE or NL
+    type=contentCheck(image_content_all)
+    print('Type of Image Contents: ', type)
 
 if __name__ == "__main__":
     mainManager(project_bug_reports_root)
