@@ -1,5 +1,3 @@
-ProjectName
-
 The user account has been locked out due to invalid login
 attempts. Please wait a while and try again.
 

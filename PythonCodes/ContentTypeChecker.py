@@ -4,7 +4,7 @@ from ReadFile import read_file
 def contentCheck(text):
     #Checking for Stack Trace (i.e., ST)
     #print('Checking for stack trace')
-    type=StackTraceChecker(text)
+    #type=StackTraceChecker(text)
     #Checking for Programming Element (i.e., PE)
     type=ProgrammingElementChecker(text)
     return type
@@ -31,6 +31,8 @@ def StackTraceChecker(text):
     \(([^)]+)\)                         # Match parameters (e.g., TUser user)
     $                                   # End of the line
     '''
+
+    
     match = re.match(pattern, text, re.VERBOSE)
 
     if match:
@@ -61,19 +63,21 @@ def StackTraceChecker(text):
 
 def ProgrammingElementChecker(text):
     # The regular expression pattern provided
-    pattern = r'((\w+)?\.[\s\n\r]*[\w]+)[\s\n\r]*(?=\(.*\))|([A-Z][a-z0-9]+){2,}'
+    #pattern = r'((\w+)?\.[\s\n\r]*[\w]+)[\s\n\r]*(?=\(.*\))|([A-Z][a-z0-9]+){2,}'
+    #From Masud-BLIZZARD
+    pattern = r'((\\w+)?\\.[\\s\\n\\r]*[\\w]+)[\\s\\n\\r]*(?=\\(.*\\))|([A-Z][a-z0-9]+){2,}'
     # Compile the regular expression for better performance if using multiple times
     compiled_pattern = re.compile(pattern)
 
     # Find all matches in the text
     matches = compiled_pattern.findall(text)
-    #print(matches)
+    print(matches)
     #print(len(matches))
     result=''
     if len(matches)>0:
         result='PE'
     else:
-        result='Not PE'
+        result='NL'
     #print(result)
     return result
 

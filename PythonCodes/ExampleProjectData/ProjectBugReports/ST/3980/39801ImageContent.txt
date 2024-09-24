@@ -1,0 +1,23 @@
+SwaggerException 
+Uncaught (in promise)
+at _throwWError 
+at SafeSubscriber._error 
+at SafeSubscriber.__tryOrUnsub 
+at SafeSubscriber.error 
+at Subscriber._error 
+at Subscriber.error 
+at MergeMapSubscriber._error 
+at MergeMapSubscriber.error 
+at MergeMapSubscriber._tryNext 
+at MergeMapSubscriber._startNext 
+at MergeMapSubscriber.notifyError 
+at InnerSubscriber._error
+at InnerSubscriber.error 
+at SafeSubscriber.__tryOrUnsub 
+at SafeSubscriber.error 
+at Subscriber._error 
+at Subscriber.error 
+at MergeMapSubscriber._error 
+at MergeMapSubscriber.error 
+at MergeMapSubscriber._tryNext 
+
