@@ -71,10 +71,18 @@ def ProgrammingElementChecker(text):
 
     # Find all matches in the text
     matches = compiled_pattern.findall(text)
-    print(matches)
+    #print(matches)
+    single_match_list=[]
+    for match in matches:
+        element=match
+        if element in single_match_list:
+            duplicate = 1
+        else:
+            single_match_list.append(element)
     #print(len(matches))
+    #print('single_match_list', single_match_list)
     result=''
-    if len(matches)>0:
+    if len(single_match_list)>5:
         result='PE'
     else:
         result='NL'

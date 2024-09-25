@@ -43,20 +43,20 @@ def createnpMatrixFromTextGraph(G):
 def build_cooccurrence_matrix(tokens, window_size=2):
     cooccurrence_matrix = defaultdict(lambda: defaultdict(int))
     calls = []
-    tokens=tokens.split();
-    print(tokens)
-    print(type(tokens))
+    #tokens=tokens.split();
+    #print(tokens)
+    #print(type(tokens))
     for i, token in enumerate(tokens):
-        print(token)
-        print(i)
+        #print(token)
+        #print(i)
         ## Get the context window around the current token
         #context = list(islice(tokens, i-window_size, i)) + list(islice(tokens, i+1, i+window_size+1))
         start_index = max(0, i - window_size)
-        print("Start_index", start_index)
+        #print("Start_index", start_index)
         end_index = min(len(tokens), i + window_size + 1)
-        print("End_index", end_index)
+        #print("End_index", end_index)
         context = list(islice(tokens, start_index, i)) + list(islice(tokens, i + 1, end_index))
-        print(context)
+        #print(context)
 
         for context_word in context:
             #cooccurrence_matrix[token][context_word] += 1
