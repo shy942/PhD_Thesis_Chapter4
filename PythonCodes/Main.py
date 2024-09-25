@@ -3,12 +3,20 @@ import os
 from ReadFile import read_file
 from Preprocessor import preprocess_text
 from ContentTypeChecker import contentCheck
+from ContentProcessor import process_PE
 
 # folder where all projects containing bug reports are stored
 project_bug_reports_root = "./ExampleProjectData/ProjectBugReports/"
 
 def checkType(Text):
     print('Check Type')
+
+def processContent(text, type):
+    final_content=''
+    if 'PE' in type:
+        print(type)
+        final_content=process_PE(text)
+    return final_content
 
 def mainManager(projects_root):
     #Get the project ids
@@ -40,6 +48,8 @@ def collectType(bug_report_path):
     #Check the Type of Description ST,PE or NL
     type=contentCheck(description)
     print('Type of description is: ', type)
+    #processed_description
+    preprocessed_description=processContent(description, type)
     #print(description)
     
     #Image Content
@@ -54,6 +64,9 @@ def collectType(bug_report_path):
     #Check the Type of Image-Conent-all ST,PE or NL
     type=contentCheck(image_content_all)
     print('Type of Image Contents: ', type)
+    #processed_image_content
+    preprocessed_image_content=processContent(image_content_all, type)
+    
 
 if __name__ == "__main__":
     mainManager(project_bug_reports_root)
