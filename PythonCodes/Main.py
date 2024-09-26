@@ -74,7 +74,10 @@ def collectType(bug_report_path):
     print(processed_image_content)
     #processed_image_content
     preprocessed_image_content=processContent(image_content_all, type)
-    
+     
+    reformulated_query=preprocessed_title+' '+preprocessed_description+' '+processed_image_content;
+    print('reformulated_query')
+    print(reformulated_query)
 
 if __name__ == "__main__":
     mainManager(project_bug_reports_root)
