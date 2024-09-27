@@ -15,7 +15,7 @@ AuditFieldConfiguration fieldConfiguration = auditFields.FirstOrDefault<AuditFie
 entity.CreatorUserId = userId;
 }
 
-ublic static void SetModificationAuditProperties(
+public static void SetModificationAuditProperties(
 IMultiTenancyConfig multiTenancyConfig,
 object entityAsObj,
 int? tenantId,

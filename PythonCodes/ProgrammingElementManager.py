@@ -8,13 +8,15 @@ from PageRank import pagerank
 def collectorProgrammingElement(text):
     #print('from collectorProgrammingElement: ', text)
     # The regular expression pattern provided
-    pattern = r'((\w+)?\.[\s\n\r]*[\w]+)[\s\n\r]*(?=\(.*\))|([A-Z][a-z0-9]+){2,}'
+    #pattern = r'((\w+)?\.[\s\n\r]*[\w]+)[\s\n\r]*(?=\(.*\))|([A-Z][a-z0-9]+){2,}'
+    pattern = r'((\w+)?\.[\s\n\r]*[\w]+)[\s\n\r]*(?=\(.*\))|([A-Z][a-z0-9]+)'
+    
     # Compile the regular expression for better performance if using multiple times
     compiled_pattern = re.compile(pattern)
 
     # Find all matches in the text
     matches = compiled_pattern.findall(text, re.MULTILINE)
-    #print(matches)
+    print(matches)
     result_all=""
     # Print the matches
     for match in matches:
@@ -31,6 +33,8 @@ def collectorProgrammingElement(text):
 
 def PE_Processor(text):
     # Programming element collection
+    print('I am from ProgrammingElementManager.py')
+    print(type(text))
     result_all = collectorProgrammingElement(text)
     #print(result_all)
     
@@ -58,4 +62,5 @@ def PE_Processor(text):
     pagerank_score = pagerank(np.array(co_matrix), num_nodes)
     print(pagerank_score)
     # Sort pagerank score
-    sortPageRankScore (node_to_index, pagerank_score)
+    result = sortPageRankScore (node_to_index, pagerank_score)
+    return result

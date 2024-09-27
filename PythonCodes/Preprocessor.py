@@ -55,8 +55,12 @@ def sortPageRankScore (node_to_index, pagerank_score):
     sorted_pagerank_score_merged = sorted (pagerank_score_merged, key= lambda x: x[1], reverse = True)
     print(sorted_pagerank_score_merged)
     # print top-10 results
-    for i in range(0, len(sorted_pagerank_score_merged), 1):
-        print(sorted_pagerank_score_merged[i][0], end = ' ')
+    if(len(sorted_pagerank_score_merged)<10):
+        for i in range(0, len(sorted_pagerank_score_merged), 1):
+            print(sorted_pagerank_score_merged[i][0], end = ' ')
+    else:
+        for i in range(0, 10 , 1):
+            print(sorted_pagerank_score_merged[i][0], end = ' ')
     
 
 

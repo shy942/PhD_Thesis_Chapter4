@@ -3,7 +3,7 @@ import os
 from ReadFile import read_file
 from Preprocessor import preprocess_text
 from ContentTypeChecker import contentCheck
-from ContentProcessor import process_PE
+from ContentProcessor import process_PE, process_NL
 
 # folder where all projects containing bug reports are stored
 project_bug_reports_root = "./ExampleProjectData/ProjectBugReports/"
@@ -11,11 +11,13 @@ project_bug_reports_root = "./ExampleProjectData/ProjectBugReports/"
 def checkType(Text):
     print('Check Type')
 
-def processContent(text, type):
-    final_content=''
+def processContentforQR(text, type):
+    final_content = []
     if 'PE' in type:
         print(type)
         final_content=process_PE(text)
+    elif 'NL' in type:
+        final_content = process_NL(text)
     return final_content
 
 def mainManager(projects_root):
@@ -51,11 +53,12 @@ def collectType(bug_report_path):
     processed_description=preprocess_text(description)
     #print(processed_description)
     #Check the Type of Description ST,PE or NL
-    type=contentCheck(description)
-    print('Type of description is: ', type)
+    typeCheck=contentCheck(description)
+    print('Type of description is: ', typeCheck)
     #processed_description
-    preprocessed_description=processContent(description, type)
-    print(preprocessed_description)
+    preprocessed_description_QR = []
+    preprocessed_description_QR = processContentforQR(description, typeCheck)
+    print(preprocessed_description_QR)
     
     #Image Content
     image_content_all = '';
@@ -68,16 +71,20 @@ def collectType(bug_report_path):
             image_content_all += file_content + "\n"
     #print(image_content_all)
     #Check the Type of Image-Conent-all ST,PE or NL
-    type=contentCheck(image_content_all)
-    print('Type of Image Contents: ', type)
+    typeCheck=contentCheck(image_content_all)
+    print('Type of Image Contents: ', typeCheck)
     processed_image_content=preprocess_text(image_content_all)
     print(processed_image_content)
     #processed_image_content
-    preprocessed_image_content=processContent(image_content_all, type)
-     
-    reformulated_query=preprocessed_title+' '+preprocessed_description+' '+processed_image_content;
-    print('reformulated_query')
-    print(reformulated_query)
+    processed_image_content_QR = []
+    processed_image_content_QR = processContentforQR(image_content_all, typeCheck)
+    
+    print('\n',type(preprocessed_title))
+    print(type(preprocessed_description_QR))
+    print(type(processed_image_content_QR))
+    reformulated_query=preprocessed_title+preprocessed_description_QR.split()+processed_image_content_QR.split();
+    #print('reformulated_query')
+    #print(reformulated_query)
 
 if __name__ == "__main__":
     mainManager(project_bug_reports_root)
