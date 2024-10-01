@@ -37,7 +37,7 @@ def preprocess_text(text):
     return tokens
 
 
-
+# This function sorts the PageRank scores
 def sortPageRankScore (node_to_index, pagerank_score):
     print ('I am from sorPageRankScore function')
     #print (type (node_to_index))
@@ -54,14 +54,41 @@ def sortPageRankScore (node_to_index, pagerank_score):
     # Sort the pagerank score
     sorted_pagerank_score_merged = sorted (pagerank_score_merged, key= lambda x: x[1], reverse = True)
     print(sorted_pagerank_score_merged)
+    sorted_result=[]
     # print top-10 results
     if(len(sorted_pagerank_score_merged)<10):
         for i in range(0, len(sorted_pagerank_score_merged), 1):
             print(sorted_pagerank_score_merged[i][0], end = ' ')
+            sorted_result.append(sorted_pagerank_score_merged[i][0])
     else:
         for i in range(0, 10 , 1):
             print(sorted_pagerank_score_merged[i][0], end = ' ')
+            sorted_result.append(sorted_pagerank_score_merged[i][0])
+    return sorted_result
+
+
+
+def marge_content(list1, list2, list3):
+    #merged_list=[]
+    # Remove duplicates while preserving order
+    unique_list = []
+    seen = set()
+    for item in list1:
+        if item not in seen:
+            unique_list.append(item)
+            seen.add(item)
     
-
-
+    
+    for item in list2:
+        if item not in seen:
+            unique_list.append(item)
+            seen.add(item)
+    
+    
+    for item in list3:
+        if item not in seen:
+            unique_list.append(item)
+            seen.add(item)
+    
+    return unique_list
 

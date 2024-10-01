@@ -35,6 +35,7 @@ def PE_Processor(text):
     # Programming element collection
     print('I am from ProgrammingElementManager.py')
     print(type(text))
+    result=[]
     result_all = collectorProgrammingElement(text)
     #print(result_all)
     
