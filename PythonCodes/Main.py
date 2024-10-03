@@ -43,8 +43,8 @@ def mainManager(project_root, project_bug_reports_root, result_file_path):
             Reformulated_query=reformulate_bug_report_content(bug_report_path, bug_report_id, result_file_path)
             print(Reformulated_query)
             query2write=' '.join(Reformulated_query)
-            #path=project_root+'/QRqueries/', bug_report_id,'.txt'
-            write_path = os.path.join(project_root, bug_report_id)
+            path=bug_report_id+'_extended_query_stem.txt'
+            write_path = os.path.join(project_root, path)
             write_file(write_path, query2write)
 
 
@@ -70,7 +70,7 @@ def reformulate_bug_report_content(bug_report_path, bug_report_id, result_file_p
     #processed_description
     preprocessed_description_QR = []
     preprocessed_description_QR = processContentforQR(description, typeCheck, bug_report_id, result_file_path)
-    print(preprocessed_description_QR)
+    #print(preprocessed_description_QR)
     
     #Image Content
     image_content_all = '';

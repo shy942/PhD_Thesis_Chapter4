@@ -56,12 +56,12 @@ def sortPageRankScore (node_to_index, pagerank_score):
     print(sorted_pagerank_score_merged)
     sorted_result=[]
     # print top-10 results
-    if(len(sorted_pagerank_score_merged)<10):
+    if(len(sorted_pagerank_score_merged)<20):
         for i in range(0, len(sorted_pagerank_score_merged), 1):
             print(sorted_pagerank_score_merged[i][0], end = ' ')
             sorted_result.append(sorted_pagerank_score_merged[i][0])
     else:
-        for i in range(0, 10 , 1):
+        for i in range(0, 20 , 1):
             print(sorted_pagerank_score_merged[i][0], end = ' ')
             sorted_result.append(sorted_pagerank_score_merged[i][0])
     return sorted_result

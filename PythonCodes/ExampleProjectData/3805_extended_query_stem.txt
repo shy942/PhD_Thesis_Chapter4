@@ -1,0 +1,1 @@
+open abp solution latest visual studio version error occurred test build core web restore angular nuke project set compile common directory default framework azure pipelines application
