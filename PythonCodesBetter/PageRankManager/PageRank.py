@@ -16,16 +16,16 @@ def pagerank(adj_matrix,num_nodes, num_iterations=100, d=0.85):
     numpy array
         PageRank scores for each node.
     """
-    print(np.array(adj_matrix))
+    #print(np.array(adj_matrix))
     #num_nodes = adj_matrix.shape[0]
 
     # Initialize pagerank scores
     pagerank_scores = np.ones(num_nodes) / num_nodes
-    print(pagerank_scores)
+    #print(pagerank_scores)
 
     # Normalize the adjacency matrix by outgoing links
     outbound_sums = adj_matrix.sum(axis=0)
-    print(outbound_sums)
+    #print(outbound_sums)
     norm_adj_matrix = np.divide(adj_matrix, outbound_sums, where=outbound_sums!=0)
 
     for _ in range(num_iterations):
@@ -39,13 +39,6 @@ def pagerank(adj_matrix,num_nodes, num_iterations=100, d=0.85):
 
 if __name__ == "__main__":
     # Example usage:
-    #adj_matrix = np.array([[0, 0, 0, 1],
-    #                      [1, 1, 0, 0],
-    #                     [0, 1, 0, 1],
-     #                    [1, 0, 1, 1]])
-
-
-
     adj_matrix = np.array([[0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0], [0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0], [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0], [1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1], [0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]])
 

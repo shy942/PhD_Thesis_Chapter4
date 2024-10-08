@@ -21,7 +21,7 @@ def read_file_topN(file_path, bugID, n):
                 # Print the cleaned and split words
                 if(len(words)==3 and words[0].isdigit()):
                     if(bugID==words[0] and words[1]=='extended'):
-                        print(words[0])
+                        #print(words[0])
                         count += 1
                         found = 1
             elif (count > 0 and found == 1 and count <= n):

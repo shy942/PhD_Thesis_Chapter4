@@ -29,7 +29,7 @@ def description_manager(description_path, bug_report_id, baseline_result_file_pa
     print('Type of description is: ', typeCheck)
     #processed_description
     preprocessed_description_QR = []
-    preprocessed_description_QR = processContentforQR(raw_descrption, typeCheck, bug_report_id, baseline_result_file_path)
+    #preprocessed_description_QR = processContentforQR(raw_descrption, typeCheck, bug_report_id, baseline_result_file_path)
     print(preprocessed_description_QR)
     
 
@@ -45,7 +45,7 @@ def image_content_manger(bug_report_path, bug_report_id, baseline_result_file_pa
     typeCheck=contentCheck(image_content_all)
     print('Type of Image Contents: ', typeCheck)
     processed_image_content_QR = []
-    processed_image_content_QR = processContentforQR(image_content_all, typeCheck, bug_report_id, baseline_result_file_path)
+    #processed_image_content_QR = processContentforQR(image_content_all, typeCheck, bug_report_id, baseline_result_file_path)
     print(processed_image_content_QR)
     
 

@@ -14,8 +14,8 @@ def collect_code_content(file_content_list, converted_relative_path, file_path):
         check=0;
         extention_length=file_extension_check(file)
         if(file == converted_relative_path and extention_length <= 3 and check<=0):
-            print('found')
-            print(file, converted_relative_path)
+            #print('found')
+            #print(file, converted_relative_path)
             content = read_file(file_path)
             #Apply PE_Process
             collectorProgrammingElement(content)
@@ -45,7 +45,7 @@ def collect_source_document_contents(directory, file_content_list):
                     relative_path = os.path.relpath(file_path, os.path.join(directory, "."))
                     # Replace backslashes with dots
                     converted_relative_path = relative_path.replace("\\", ".")
-                    print(converted_relative_path)
+                    #print(converted_relative_path)
 
                     #Collect source code content if the source code is in file_content_list
                     content = content + '\n' + collect_code_content(file_content_list, converted_relative_path, file_path)
