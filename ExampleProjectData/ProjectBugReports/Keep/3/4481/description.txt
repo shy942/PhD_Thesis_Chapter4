@@ -1,0 +1,28 @@
+When using `module-zero-core-template`, I noticed an issue when users try to change the theme multiple times and the `Setting` is not found to said user. In said cases, multiple rows are inserted in AbpSetting, creating duplicates.
+
+I would like to know if it makes sense to set a unique constraint / alternate key to such table and implement a way of validating if said row already exists on the table on INSERT.
+
+I have faced similar issues using EFCore and SQL Server on my own projects and have implemented the following code:
+
+```
+// ....
+try
+{
+    _repository.Insert(entity);
+}
+catch (DbUpdateException ex)
+{
+    if (ex.InnerException is SqlException innerException &&
+        (innerException.Number == 2601 || innerException.Number == 2627))
+    {
+        return await FindOrCreateAsync(entity.TenantId, entity.UserId, entity.Name);
+    }
+
+    throw;
+}
+```
+
+Example of such issue:
+
+![image](https://user-images.githubusercontent.com/5401232/56677183-58a75680-6696-11e9-96f9-54149d5f53b1.png)
+

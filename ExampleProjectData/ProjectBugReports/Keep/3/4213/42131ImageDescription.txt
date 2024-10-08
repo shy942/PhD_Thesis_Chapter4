@@ -1,0 +1,1 @@
+ The image appears to be a screenshot of a diagnostic or profiling tool displaying a hierarchy of objects and their memory usage. The visual structure is a tree view, where each node represents a type of object and can be expanded to reveal its children. Each node in the tree has the following columns:   

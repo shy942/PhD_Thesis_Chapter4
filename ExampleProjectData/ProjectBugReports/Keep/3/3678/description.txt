@@ -1,0 +1,26 @@
+FileNotFoundException HttpException 
+The log4net file is actually exsits, but 
+   System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath) +519
+   System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost) +776
+   System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share) +65
+   Abp.Castle.Logging.Log4Net.Log4NetLoggerFactory..ctor(String configFileName, Boolean reloadOnChange) +218
+   Abp.Castle.Logging.Log4Net.Log4NetLoggerFactory..ctor() +12
+   lambda_method(Closure , Object[] ) +41
+   Castle.Core.Internal.ReflectionUtil.Instantiate(ConstructorInfo ctor, Object[] ctorArgs) +87
+   Castle.Core.Internal.ReflectionUtil.Instantiate(Type subtypeofTBase, Object[] ctorArgs) +307
+   Castle.Core.Internal.ReflectionUtil.CreateInstance(Type subtypeofTBase, Object[] ctorArgs) +116
+   Castle.Facilities.Logging.LoggingFacility.CreateProperLoggerFactory(LoggerImplementation loggerApi) +40
+   Castle.Facilities.Logging.LoggingFacility.Init() +37
+   Castle.MicroKernel.Facilities.AbstractFacility.Castle.MicroKernel.IFacility.Init(IKernel kernel, IConfiguration facilityConfig) +31
+   Castle.MicroKernel.DefaultKernel.AddFacility(String key, IFacility facility) +153
+   Castle.MicroKernel.DefaultKernel.AddFacility(IFacility facility) +46
+   Castle.MicroKernel.DefaultKernel.AddFacility(Action`1 onCreate) +76
+   Castle.Windsor.WindsorContainer.AddFacility(Action`1 onCreate) +61
+   Adbp.Sample.Web.MvcApplication.Application_Start(Object sender, EventArgs e) in D:\Dilrba\aspnetboilerplate\src\Adbp.Sample.Web\Global.asax.cs:20
+   System.Web.HttpApplicationFactory.EnsureAppStartCalledForIntegratedMode(HttpContext context, HttpApplication app) +476
+   System.Web.HttpApplication.RegisterEventSubscriptionsWithIIS(IntPtr appContext, HttpContext context, MethodInfo[] handlers) +118
+   System.Web.HttpApplication.InitSpecial(HttpApplicationState state, MethodInfo[] handlers, IntPtr appContext, HttpContext context) +176
+   System.Web.HttpApplicationFactory.GetSpecialApplicationInstance(IntPtr appContext, HttpContext context) +349
+   System.Web.Hosting.PipelineRuntime.InitializeApplication(IntPtr appContext) +303
+   System.Web.HttpRuntime.FirstRequestInit(HttpContext context) +658
+   System.Web.HttpRuntime.EnsureFirstRequestInit(HttpContext context) +89

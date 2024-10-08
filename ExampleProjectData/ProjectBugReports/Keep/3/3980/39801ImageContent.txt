@@ -1,0 +1,68 @@
+Request URL: http://localhost:22742/api/services/app/Item/GetItem?AdId=1000021352&IsEdit=false
+Request Method: GET
+Status Code: 500 Internal Server Error
+Remote Address: [::1]:22742
+Referrer Policy: no-referrer-when-downgrade
+
+Response Headers
+view source
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: http://localhost:4200
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Mon, 29 Oct 2018 01:29:32 GMT
+Powered-By: City.com
+Transfer-Encoding: chunked
+Vary: Origin
+X-Frame-Options: SAMEORIGIN
+X-Suricata-ID: 1234
+X-XSS-Protection: 1; mode=block
+
+Request Headers
+view source
+Accept: application/json
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+Host: localhost:22742
+Origin: http://localhost:4200
+Referer: http://localhost:4200/
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36
+
+Angular is running in the development mode. Call enableProdMode() to enable the production mode.
+core.js:3121 ERROR 
+
+HttpErrorResponse {headers: HttpHeaders, status: 500, statusText: "Internal Server Error", url: "http://localhost:22742/api/services/app/Item/GetItem?AdId=1000021352&IsEdit=false", ok: false, …}
+error: {code: 8, message: "Tenant session is not valid.", details: null, validationErrors: null}
+headers: HttpHeaders {normalizedNames: Map(0), lazyUpdate: null, lazyInit: ƒ}
+message: "Http failure response for http://localhost:22742/api/services/app/Item/GetItem?AdId=1000021352&IsEdit=false: 500 Internal Server Error"
+name: "HttpErrorResponse"
+ok: false
+status: 500
+statusText: "Internal Server Error"
+url: "http://localhost:22742/api/services/app/Item/GetItem?AdId=1000021352&IsEdit=false"
+__proto__: HttpResponseBase
+
+ERROR 
+Error: Uncaught (in promise): Error
+Error at new SwaggerException (http://localhost:4200/vendor.bundle.js:115428:28)
+at _throwWError (http://localhost:4200/vendor.bundle.js:115487:29)
+at SafeSubscriber._error (http://localhost:4200/vendor.bundle.js:115518:16)
+at SafeSubscriber.__tryOrUnsub (http://localhost:4200/vendor.bundle.js:97224:13)
+at SafeSubscriber.error (http://localhost:4200/vendor.bundle.js:97172:16)
+at Subscriber._error (http://localhost:4200/vendor.bundle.js:97120:22)
+at Subscriber.error (http://localhost:4200/vendor.bundle.js:97094:15)
+at MergeMapSubscriber._error (http://localhost:4200/vendor.bundle.js:25139:26)
+at MergeMapSubscriber.error (http://localhost:4200/vendor.bundle.js:25123:18)
+at MergeMapSubscriber._tryNext (http://localhost:4200/vendor.bundle.js:25487:21)
+at MergeMapSubscriber._startNext (http://localhost:4200/vendor.bundle.js:25519:10)
+at MergeMapSubscriber.notifyError (http://localhost:4200/vendor.bundle.js:25548:12)
+at InnerSubscriber._error (http://localhost:4200/vendor.bundle.js:100407:21)
+at InnerSubscriber.error (http://localhost:4200/vendor.bundle.js:97254:22)
+at SafeSubscriber.__tryOrUnsub (http://localhost:4200/vendor.bundle.js:97224:13)
+at SafeSubscriber.error (http://localhost:4200/vendor.bundle.js:97172:16)
+at Subscriber._error (http://localhost:4200/vendor.bundle.js:97120:22)
+at Subscriber.error (http://localhost:4200/vendor.bundle.js:97094:15)
+at MergeMapSubscriber._error (http://localhost:4200/vendor.bundle.js:25719:26)
+at MergeMapSubscriber.error (http://localhost:4200/vendor.bundle.js:25661:18)
+at MergeMapSubscriber._tryNext (http://localhost:4200/vendor.bundle.js:25649:21)
+

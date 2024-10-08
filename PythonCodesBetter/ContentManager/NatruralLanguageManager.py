@@ -30,7 +30,7 @@ def file_extension_check(fileName):
 # collect Top-N (N=10) source documents from a software project
 def collect_source_document_contents(directory, file_content_list):
     #print(directory)
-    print(file_content_list)
+    #print(file_content_list)
  
     content = ''
     for root, dirs, files in os.walk(directory):
@@ -60,7 +60,7 @@ def collect_content(file_content_list):
     return source_code_content
 
 #Parameters are bugID, preprocessed bug report conetnt, result path
-def NL_Processor(bug_report_id, text, result_file_path):
+def NL_Processor(bug_report_id, result_file_path):
     # Collect contents from the top-10 source codes
     file_content_list=[]
     file_content_list=read_file_topN(result_file_path, bug_report_id, 10)

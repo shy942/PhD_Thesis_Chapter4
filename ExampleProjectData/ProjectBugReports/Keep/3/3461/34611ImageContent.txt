@@ -1,0 +1,27 @@
+An unhandled exception occurred while processing the request.
+
+InvalidOperationException: Navigation property 'Claims' on entity of type 'User' cannot be loaded because the entity is not being tracked. Navigation properties can only be loaded for tracked entities.
+Microsoft.EntityFrameworkCore.Internal.EntityFinder<TEntity>.LoadAsync(INavigation navigation, InternalEntityEntry entry, CancellationToken cancellationToken)
+
+Stack Query Cookies Headers
+
+InvalidOperationException: Navigation property 'Claims' on entity of type 'User' cannot be loaded because the entity is not being tracked. Navigation properties can only be loaded for tracked entities.
+Microsoft.EntityFrameworkCore.Internal.EntityFinder<TEntity>.LoadAsync(INavigation navigation, InternalEntityEntry entry, CancellationToken cancellationToken)
+Abp.Domain.Repositories.RepositoryExtensions.EnsureCollectionLoadedAsync<TEntity, TPrimaryKey, TProperty>(IRepository<TEntity, TPrimaryKey> repository, TEntity entity, Expression<Func<TEntity, IEnumerable<TProperty>>> collectionExpression, CancellationToken cancellationToken) in RepositoryExtensions.cs
+Abp.Authorization.Users.AbpUserStore<TRole, TUser>.GetClaimsAsync(TUser user, CancellationToken cancellationToken) in AbpUserStore.cs
+Microsoft.AspNetCore.Identity.UserManager<TUser>.GetClaimsAsync(TUser user)
+Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory<TUser>.GenerateClaimsAsync(TUser user)
+Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory<TRole>.GenerateClaimsAsync(TUser user)
+Microsoft.AspNetCore.Identity.UserClaimsPrincipalFactory<TUser>.CreateAsync(TUser user)
+Abp.Authorization.AbpUserClaimsPrincipalFactory<TUser>.CreateAsync(TUser user) in AbpUserClaimsPrincipalFactory.cs
+Abp.Threading.InternalAsyncHelper.AwaitTaskWithPostActionAndFinallyAndGetResult<T>(Task<T> actualReturnValue, Func<Task> postAction, Action<Exception> finalAction)
+Microsoft.AspNetCore.Identity.SignInManager<TUser>.CreateUserPrincipalAsync(TUser user)
+Microsoft.AspNetCore.Identity.SecurityStampValidator<TUser>.SecurityStampVerified(TUser user, CookieValidatePrincipalContext context)
+Microsoft.AspNetCore.Identity.SecurityStampValidator.ValidateAsync(CookieValidatePrincipalContext context)
+Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.HandleAuthenticateAsync()
+Microsoft.AspNetCore.Authentication.AuthenticationHandler<TOptions>.AuthenticateAsync()
+Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, string scheme)
+Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+Show raw exception details

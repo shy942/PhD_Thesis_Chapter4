@@ -1,0 +1,8 @@
+Hi, I tried to configure sourcelink following all steps detailed into this thread but it doesn´t work. I am using ABP 5.2.0 and VS 2019. when I tried to get the symbols into local cache it couldn´t download any ABP´s pdb file.
+
+You can see the debug configuration bellow. Please could you help me with this issue?
+
+![debugGeneral](https://user-images.githubusercontent.com/4116028/76955048-76e5f880-68df-11ea-9d60-883bf235dc4c.png)
+![debugSymbols](https://user-images.githubusercontent.com/4116028/76955075-82d1ba80-68df-11ea-93fe-b6369dae190a.png)
+
+_Originally posted by @lovojor in https://github.com/aspnetboilerplate/aspnetboilerplate/issues/2133#issuecomment-600565132_

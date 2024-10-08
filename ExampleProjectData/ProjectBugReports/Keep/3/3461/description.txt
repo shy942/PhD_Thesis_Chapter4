@@ -1,0 +1,14 @@
+Abp Version:3.6.2
+.Net Core Version:2.1.0
+Ef Core Version:2.1
+
+When I upgrade to .net core 2.1, after the user login in, idle for a period of time (without any operation and not close browser), it will throw the following error:
+```
+InvalidOperationException: Navigation property 'Claims' on entity of type 'User' cannot be loaded because the entity is not being tracked. Navigation properties can only be loaded for tracked entities.
+```
+![image](https://user-images.githubusercontent.com/10071911/40914799-30a61950-682c-11e8-9c33-b740938c0787.png)
+
+![image](https://user-images.githubusercontent.com/10071911/40914822-4d5f0214-682c-11e8-8efd-c4ec3ae1d6e7.png)
+
+
+

@@ -1,0 +1,1 @@
+open abp solution with latest visual studio 2017(version 15.8.2)  an error occurred

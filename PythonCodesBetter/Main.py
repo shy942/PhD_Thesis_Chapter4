@@ -1,5 +1,6 @@
 import os
 from ReformulateManager.ReformulateManager import reformulate_bug_report_content
+from Utility.WriteFile import write_file
 
 # folder where all projects containing bug reports are stored
 project_bug_reports_root = "../ExampleProjectData/ProjectBugReports/"
@@ -24,6 +25,12 @@ def mainManager(project_root, project_bug_reports_root, baseline_result_file_pat
             bug_report_id=bug_report
             Reformulated_query=[]
             Reformulated_query=reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_result_file_path)
+            query2write=''
+            query2write=' '.join(Reformulated_query)
+            path=bug_report_id+'_extended_query_stem.txt'
+            write_path = os.path.join(project_root, path)
+            write_file(write_path, query2write)
+
     
 if __name__ == "__main__":
     print('I am from Main.py')

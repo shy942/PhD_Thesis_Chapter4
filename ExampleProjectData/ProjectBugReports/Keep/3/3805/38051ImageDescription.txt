@@ -1,0 +1,1 @@
+This is a screenshot of an "Error List" window from an Integrated Development Environment (IDE). The Error List is currently displaying information at the bottom pane and is filtered to show "Entire Solution" scoped errors. The toolbar indicates there is 1 Error, 0 of 5 Warnings, 0 Messages, and the selection context is "Build + IntelliSense." 

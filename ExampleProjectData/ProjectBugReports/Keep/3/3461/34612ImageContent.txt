@@ -1,0 +1,24 @@
+An unhandled exception occurred while processing the request.
+
+InvalidOperationException: Navigation property 'Claims' on entity of type 'User' cannot be loaded because the entity is not being tracked. Navigation properties can only be loaded for tracked entities.
+Microsoft.EntityFrameworkCore.Internal.EntityFinder<TEntity>.LoadAsync(INavigation navigation, InternalEntityEntry entry, CancellationToken cancellationToken)
+
+Stack    Query    Cookies    Headers
+
+Variable                        Value
+Accept                          text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding                 gzip, deflate, br
+Accept-Language                 zh-CN,zh;q=0.9,en;q=0.8
+Connection                      Keep-Alive
+Cookie                          _ga=GA1.1.294832487.1522421709; .AspNetCore.Culture=c%3Dzh-CN%7Cui%3Dzh-CN; .AspNetCore.Antiforgery.wMASbeT04k=
+                                CfDJ8Htc4n8wL9NiVlYYWuv7vUKWMgXeY2pAbYfizzOk4izr-KdJlZqFKp4bQjWe3dj81nYhFl4c-pB78769E_0r3EaCwMUoLig4X6to6PCtNTm27Sqdw2P2Z2P1NN4RZTpBQo2t1zfrK5OjN93Y8gMuko4; 
+                                .AspNetCore.Identity.Application=CfDJ8Htc4n8wL9NiVlYYWuv7uVlGUaKfG_BttQ79fjhVGBrnmDJt-GGBnnd3j5FdryObJtfD7-OkoVg8k5oCziiuKIhVjrns72-DlodT5ODhORQ5a_VEkpsh6rfJ6i2GPKGISvYQnigM70H-JIRXX-
+                                Zlo7rSvajQ1OIdTdtKdG5cuL539x0sAcKXQd9BaJstk9BzxN0SSMYwUc1rcw6msmyBW1HlOXSvU9oH1GUwxOFjoe_s_D-gmqlxorND9kfpv-ivV6dh9opf8t8nYFniKiwvFFcTkrozkaBONTNHK5Lu5dT54jYxqexJYmlFpeE66e4Mk77v8Z7FAB-
+                                woQkktjds3gAdlAcy1kfX2006ImVfM6giasM0sefFgUSpHf7soNccVcvTtOUQvm3zehYFEEZgyap9qWTrVTtp1ot9DT8H5qeXAnkV7tqrnL3KI1lUbbACiK5C3cYRfsZIr2Pl5JO8VUED2fira4Ett9KUEuN_uoxl-kWTu3kj68IUH1AgzcSCWbvXS5lKihYRXai1Y_OSJuK_hsRxlACHE55lULCaFGTUje0hQwdb78PPrbJ1mD7jk7I-aKK-UDCwa148vun3zTZYvP-OCvjIzLnqUGYZRwfEhZaqdW4ogMM2T95gof6aZQQoSDSLTUCxIV5R5Yk-4rFMz4to0G; 
+                                ZHT-XSRF-TOKEN=CfDJ8Htc4n8wL9NiVlYYWuv7vjPH8sW5-34q4YcN4Yx3aPWrh_sfjS-s2SA94KsTIUqSkqZoKh_1AHiVw4mAYNeBU4ZK-ohLwRRi2vz9Jv9bSB1VSAyG6lo3rxmXTJ4QdC9=om9ds7j7r-njjUnkL5lw1Eeby83MYa-nanGUSlvOr5x1PSQ
+Host                            localhost:63975
+MS-ASPNETCORE-TOKEN             1df4665b-e5fc-49ee-b758-ee3adb3fb262
+Upgrade-Insecure-Requests       1
+User-Agent                      Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
+X-Original-For                  127.0.0.1:59322
+X-Original-Proto                http

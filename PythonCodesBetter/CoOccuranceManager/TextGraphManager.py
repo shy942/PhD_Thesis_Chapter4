@@ -14,8 +14,8 @@ def create_graph_my_code(calls):
             G.add_edge(caller, callee)
     
     #return G
-    print(G.nodes)
-    print(G.edges)
+    #print(G.nodes)
+    #print(G.edges)
     #G = create_graph(cooccurrence_matrix)
 
     # Draw the graph

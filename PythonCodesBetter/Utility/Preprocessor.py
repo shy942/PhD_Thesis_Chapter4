@@ -34,6 +34,10 @@ def preprocess_text(text):
 
     # remove words with fewer than 3 characters
     tokens = [word for word in tokens if len(word) >= 3]
+    
+    print('Type of tokens inside Preprocessor.py')
+    #print(tokens)
+    print(type(tokens))
 
     return tokens
 

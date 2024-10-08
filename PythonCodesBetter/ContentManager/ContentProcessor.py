@@ -11,10 +11,10 @@ def process_PE(text):
     return result
 
 
-def process_NL(bug_report_id, text, result_file_path):
+def process_NL(bug_report_id, result_file_path):
     result=[]
     print('Process Natural Language Text')
-    result=NL_Processor(bug_report_id, text, result_file_path)
+    result=NL_Processor(bug_report_id, result_file_path)
     return result
 
 def main_processor(type):

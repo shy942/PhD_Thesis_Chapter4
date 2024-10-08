@@ -1,0 +1,8 @@
+Hi,
+
+- ABP 2.1.3 MVC
+
+Ideally the following should be cleaned up in abp.js as reported by http://eslint.org/. At a minimum the equality checking.
+
+![image](https://user-images.githubusercontent.com/4738140/27909301-5f774ad2-6293-11e7-8afa-bdc51a8879bc.png)
+

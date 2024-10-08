@@ -1,6 +1,8 @@
 import re
 import os
 from ReadFile import read_file
+
+#Checking for content type
 def contentCheck(text):
     #Checking for Stack Trace (i.e., ST)
     #print('Checking for stack trace')
@@ -9,7 +11,7 @@ def contentCheck(text):
     type=ProgrammingElementChecker(text)
     return type
 
-
+#Checking for stack trace
 def StackTraceChecker(text):
     # The regular expression pattern provided
     #pattern = r'^\s*(?:at\s+)?([\w$.]+)\(([\w.]+\.:\d+|Unknown Source|Native Method)\)$'

@@ -17,7 +17,7 @@ def collectorProgrammingElement(text):
 
     # Find all matches in the text
     matches = compiled_pattern.findall(text, re.MULTILINE)
-    print(matches)
+    #print(matches)
     result_all=""
     # Print the matches
     for match in matches:

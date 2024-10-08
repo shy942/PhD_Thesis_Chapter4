@@ -1,0 +1,25 @@
+<packages>
+  <package id="Abp" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.AutoMapper" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Castle.Log4Net" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Owin" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.RedisCache" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Web.Api" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Web.Common" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Web.Mvc" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Web.SignalR" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Zero" version="3.8.0" targetFramework="net461" />
+  <package id="Abp.Zero.Common" version="3.8.0" targetFramework="net461" />
+  <package id="Amir" version="3.5.0.2" targetFramework="net461" />
+  <package id="AutoMapper" version="7.0.1" targetFramework="net461" />
+  <package id="AutoMapper.Collection" version="4.0.0"> targetFramework="net461" />
+  <package id="Castle.Core" version="4.3.1" targetFramework="net461" />
+  <package id="Castle.LoggingFacility" version="4.0.0" targetFramework="net461" />
+  <package id="Castle.Windsor" version="4.1.0" targetFramework="net461" />
+  <package id="EntityFramework" version="6.2.0" targetFramework="net461" />
+  <package id="JetBrains.Annotations" version="2018.2.1" targetFramework="net461" />
+  <package id="jQuery" version="3.3.1" targetFramework="net461" />
+  <package id="log4net" version="2.0.8" targetFramework="net461" />
+  <package id="Microsoft.AspNet.Identity.Core" version="2.2.2" targetFramework="net461" />
+  <package id="Microsoft.AspNet.Identity.Owin" version="2.2.2" targetFramework="net461" />
+</packages>
