@@ -1,1 +1,0 @@
-Incorrect screenshot of XML localization files in the documentation

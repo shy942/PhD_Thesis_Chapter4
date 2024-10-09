@@ -1,3 +1,0 @@
-https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/master/doc/WebSite/images/localization_files2.png
-https://user-images.githubusercontent.com/685832/40176297-391c56e4-59db-11e8-9b14-6d2ed4fe0708.png
-

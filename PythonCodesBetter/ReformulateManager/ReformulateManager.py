@@ -17,11 +17,11 @@ def reformulateBasedOnType(type_description, type_image_content, raw_description
         print('Both are NL types so process only once ')
         preprocessed_description_QR = process_NL(bug_report_id, result_file_path)
     elif 'NL' in type_description and 'PE' in type_image_content:
-        preprocessed_description_QR = process_NL (raw_description) 
+        preprocessed_description_QR = process_NL (bug_report_id, result_file_path) 
         processed_image_content_QR = process_PE(image_content)
     elif 'PE' in type_description and 'NL' in type_image_content:
         preprocessed_description_QR = process_PE (raw_description) 
-        processed_image_content_QR = process_NL(image_content)
+        processed_image_content_QR = process_NL(bug_report_id,result_file_path)
     elif 'PE' in type_description and 'PE' in type_image_content:
         preprocessed_description_QR = process_PE (raw_description) 
         processed_image_content_QR = process_PE(image_content)
@@ -62,7 +62,7 @@ def reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_resu
     title_path = os.path.join(bug_report_path, 'title.txt')
     preprocessed_title= []
     preprocessed_title=title_manager(title_path)
-    print('preprocessed title type: ', type(preprocessed_title))
+    print('preprocessed title type: ', (preprocessed_title))
     description_path = os.path.join(bug_report_path, 'description.txt')
     raw_description='';
     raw_description=get_description_content(description_path)

@@ -1,5 +1,0 @@
-Localization
-  AbpWeb
-    SimpleTaskSystem
-      SimpleTaskSystem-tr.xml
-      SimpleTaskSystem.xml

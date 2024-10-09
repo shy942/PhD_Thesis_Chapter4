@@ -1,5 +1,0 @@
-Hello.
-The [documentation](https://aspnetboilerplate.com/Pages/Documents/Localization#xml-files) contains a [screenshot](https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/master/doc/WebSite/images/localization_files2.png) of the XML localization files. A little lower, note indicates the inadmissibility of using a dot in file names, but the screenshot show file name with a dot. I corrected the image a bit and it would be nice to bring the image in line with the text.
-
-![localization_files2](https://user-images.githubusercontent.com/685832/40176297-391c56e4-59db-11e8-9b14-6d2ed4fe0708.png)
-
