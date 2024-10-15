@@ -5,6 +5,8 @@ import sys
 
 # Open the file in read mode and find top-10 source codes for a given bug 
 def read_file_topN(file_path, bugID, n):
+    print('\n')
+    print ('Ton-', n, 'files')
     list = []
     count = 0
     found = 0
@@ -30,6 +32,7 @@ def read_file_topN(file_path, bugID, n):
                 list.append(converted_file)
                 count += 1
     print(list)
+    print('\n')
     return list
 
 # read file with encoding utf-8 or iso-8859-1

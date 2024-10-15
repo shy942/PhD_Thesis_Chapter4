@@ -56,7 +56,7 @@ def collect_source_document_contents(directory, file_content_list):
 
 def collect_content(file_content_list):
     #print(file_content_list)
-    print(source_codes_root)
+    #print(source_codes_root)
     source_code_content=collect_source_document_contents(source_codes_root, file_content_list)
     #print(source_code_content)
     return source_code_content
@@ -66,7 +66,7 @@ def NL_Processor(bug_report_id, result_file_path):
     # Collect contents from the top-10 source codes
     file_content_list=[]
     file_content_list=read_file_topN(result_file_path, bug_report_id, 10)
-    print(file_content_list)
+    #print(file_content_list)
     source_codes_content=collect_content(file_content_list)
     #print(source_codes_content)
     #Apply PE_Process

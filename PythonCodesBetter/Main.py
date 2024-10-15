@@ -27,8 +27,10 @@ def mainManager(project_root, project_bug_reports_root, baseline_result_file_pat
             Reformulated_query=reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_result_file_path)
             query2write=''
             query2write=' '.join(Reformulated_query)
-            path=bug_report_id+'_extended_query_stem.txt'
-            write_path = os.path.join(project_root, path)
+            path=bug_report_id+'_extended_query.txt'
+            write_path = os.path.join(project_root, 'QRqueries')
+            #write_path = os.path.join(project_root, path)
+            write_path = os.path.join(write_path, path)
             write_file(write_path, query2write)
 
     

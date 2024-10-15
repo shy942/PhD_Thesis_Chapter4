@@ -18,7 +18,7 @@ def preprocess_text_by_single_string(text):
     final_text = ''
     for str in text:
         oldStr=str
-        print(oldStr)
+        #print(oldStr)
         # remove urls and the markdown link
         str = regex.sub(r'\!\[.*?\]\(https?://\S+?\)', '', str) 
         str = regex.sub(r'https?://\S+|www\.\S+', '', str) 
@@ -51,15 +51,16 @@ def preprocess_text_by_single_string(text):
             else:
                 newword = word   
             part2 = part2 + ' ' + newword  
-        print(type(part1))
-        print(type(part2))
+        #print(type(part1))
+        #print(type(part2))
         final_str= part1+ ' ' + part2
-        print (final_str)
+        #print (final_str)
         final_text = final_text + ' ' + final_str
-    print(final_text.split())
+    #print(final_text.split())
     return final_text.split()
+
 def splitDotWord(word):
-    print('I am from splitDotWord')
+    #print('I am from splitDotWord')
     splitedList = []
     splitedList = word.split('.')
     str2return = ' '

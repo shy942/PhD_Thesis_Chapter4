@@ -15,7 +15,8 @@ def reformulateBasedOnType(type_description, type_image_content, raw_description
     processed_image_content_QR = []
     if 'NL' in type_description and 'NL' in type_image_content:
         print('Both are NL types so process only once ')
-        preprocessed_description_QR = processed_image_content_QR = process_NL(bug_report_id, result_file_path)
+        preprocessed_description_QR = [] 
+        processed_image_content_QR = process_NL(bug_report_id, result_file_path)
     elif 'NL' in type_description and 'PE' in type_image_content:
         preprocessed_description_QR = process_NL (bug_report_id, result_file_path) 
         processed_image_content_QR = process_PE(image_content)
@@ -57,7 +58,7 @@ def get_description_content(description_path):
     return raw_descrption
 
 def reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_result_file_path):
-    print('.............................................................................................................',bug_report_path)
+    #print('.............................................................................................................',bug_report_path)
     # gather bug report title and description
     title_path = os.path.join(bug_report_path, 'title.txt')
     preprocessed_title= []
@@ -66,17 +67,17 @@ def reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_resu
     description_path = os.path.join(bug_report_path, 'description.txt')
     raw_description='';
     raw_description=get_description_content(description_path)
-    print(raw_description)
+    #print(raw_description)
     image_content_all = '';
     image_content_all=get_image_content(bug_report_path)
-    print(image_content_all)
+    #print(image_content_all)
     type_description, type_image=type_check_description_image(raw_description, image_content_all)
-    print(type_description)
-    print(type_image)
+    print('Description type: ',type_description)
+    print('Image Content type: ',type_image)
     process_content = []
     preprocessed_description_QR,  processed_image_content_QR= reformulateBasedOnType(type_description, type_image, raw_description, image_content_all, bug_report_id, baseline_result_file_path)
-    print('---------------------------',preprocessed_description_QR)
-    print('-----------------------------',processed_image_content_QR)
+    print('preprocessed_description_QR: ',preprocessed_description_QR)
+    print('processed_image_content_QR: ',processed_image_content_QR)
     #print(type(preprocessed_title))
     #print(type(preprocessed_description_QR))
 
