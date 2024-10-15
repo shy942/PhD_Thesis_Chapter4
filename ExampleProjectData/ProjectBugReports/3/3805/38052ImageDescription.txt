@@ -1,0 +1,1 @@
+The image displays a screenshot from a command-line interface. It shows the result of executing the command `dotnet --list-sdks`. The output lists different versions of the .NET SDK installed on the machine, along with their respective installation paths. There are four SDK versions displayed, each followed by the directory path where they are installed.

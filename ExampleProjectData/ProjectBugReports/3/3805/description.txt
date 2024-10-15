@@ -1,0 +1,14 @@
+when open the solution in vs2017(version 15.8.2), there is an error for project `AbpAspNetCoreDemo.csproj`.
+![image](https://user-images.githubusercontent.com/1829209/44824810-285c0500-ac3a-11e8-8468-c89131c3d3e5.png)
+
+list of dotnet sdk installed:
+![image](https://user-images.githubusercontent.com/1829209/44824902-8a1c6f00-ac3a-11e8-92fe-db9812c621b8.png)
+
+SOLUTION:
+remove this line : https://github.com/aspnetboilerplate/aspnetboilerplate/blob/f4a9488b7d3128e7471a9a13acefcae7210aef6b/test/aspnet-core-demo/AbpAspNetCoreDemo/AbpAspNetCoreDemo.csproj#L9
+
+and recommend replace this line:
+https://github.com/aspnetboilerplate/aspnetboilerplate/blob/f4a9488b7d3128e7471a9a13acefcae7210aef6b/test/aspnet-core-demo/AbpAspNetCoreDemo/AbpAspNetCoreDemo.csproj#L24
+To:
+`<PackageReference Include="Microsoft.AspNetCore.App"/>`
+

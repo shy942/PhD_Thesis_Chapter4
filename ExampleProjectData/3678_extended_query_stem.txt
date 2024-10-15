@@ -1,0 +1,1 @@
+abp log net config file http application facility init factory info logger intptr runtime kernel path ctor event add httpcontext context ensure instance int log4 ioc server map automapper auto mapper logging args loggingfacility abpbootstrapper brains jet jetbrains container framework

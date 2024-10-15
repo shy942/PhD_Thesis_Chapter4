@@ -1,0 +1,1 @@
+Add Unique Constraint / Alternate Key to AbpSetting

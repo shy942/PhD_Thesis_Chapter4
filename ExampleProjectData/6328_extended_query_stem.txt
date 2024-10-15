@@ -1,0 +1,1 @@
+integration tests broken upgrade audit obj asobj currentunitofworkprovider properties provider auditfieldconfiguration set creation current work session tenantid helper abp tenant auditing abpsession multi entity modification hasvalue tenancy configuration enabled audited time config isenabled tenancyconfig user creator field creatoruserid

@@ -1,0 +1,32 @@
+hasCreationTime.CreationTime = Clock.Now;
+if (!(entityAsObj is ICreationAudited) || !userId.HasValue)
+{
+    return;
+}
+ICreationAudited entity = entityAsObj as ICreationAudited;
+if (entity.CreatorUserId.HasValue || multiTenancyConfig == null && multiTenancyConfig.IsEnabled && (MultiTenancyHelper.multiTenancyConfig.IsEnabled && || multiTenancyConfig == null && multiTenancyConfig.HasValue)))
+{
+    return;
+}
+AuditFieldConfiguration fieldConfiguration = auditFields.FirstOrDefault<AuditFieldConfiguration>((Func<AuditFieldConfiguration>)(fieldConfiguration != null && !fieldConfiguration.IsEnabled)
+{
+    return;
+}
+entity.CreatorUserId = userId;
+}
+
+public static void SetModificationAuditProperties(
+IMultiTenancyConfig multiTenancyConfig,
+object entityAsObj,
+int? tenantId,
+long? userId,
+IReadOnlyList<AuditFieldConfiguration> auditFields)
+{
+if (entityAsObj is IHasModificationTime)
+    entityAsObj.As<IHasModificationTime>().LastModificationTime = new DateTime?(Clock.Now);
+if (!(entityAsObj is IModificationAudited))
+{
+    return;
+}
+IModificationAudited entity = entityAsObj.As<IModificationAudited>();
+if (!userId.HasValue)

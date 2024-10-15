@@ -1,0 +1,1 @@
+open abp solution latest visual studio version error occurred net file directory dot test build core project set path pipelines framework targets entity azure executes entityframeworkcore root azurepipelines

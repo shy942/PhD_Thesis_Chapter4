@@ -1,0 +1,1 @@
+AbpSession.TenantId is not set when saving audit logs in background

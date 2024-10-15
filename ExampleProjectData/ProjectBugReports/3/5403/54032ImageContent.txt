@@ -1,0 +1,47 @@
+Options
+
+Search Options (Ctrl+E)
+  Environment
+  Projects and Solutions
+  Source Control
+  Work Items
+  Text Editor
+    - General
+    - Just-In-Time
+    - Output Window
+  Debugging
+    Symbols
+  Performance Tools
+  Azure Data Lake
+  Azure Dev Spaces Tools
+  Azure Service Authentication
+  Container Tools
+  Cross Platform
+  Database Tools
+  F# Tools
+  IntelliCode
+  Live Share
+  NuGet Package Manager
+  Office Tools
+  Office Tools (Web)
+  Service Fabric Tools
+  SQL Server Tools
+  Test
+  Text Template
+  Web Forms Designer
+  Web Performance Test Tools
+  Windows Forms Designer
+  Workflow Designer
+  Xamarin
+  XAML Designer
+
+Symbols
+Symbol file (.pdb) locations:
+[ ] Microsoft Symbol Servers
+[ ] NuGet.org Symbol Server
+
+Symbols to load automatically
+Symbols for the selected modules (*.dll or *.exe) will be loaded automatically.
+Modules:
+[x] abp*.dll
+[ ] Always load symbols located next to modules

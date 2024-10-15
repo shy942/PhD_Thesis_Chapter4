@@ -1,0 +1,5 @@
+dotnet --list-sdks
+2.1.202 [C:\Program Files\dotnet\sdk]
+2.1.302 [C:\Program Files\dotnet\sdk]
+2.1.400 [C:\Program Files\dotnet\sdk]
+2.1.401 [C:\Program Files\dotnet\sdk]

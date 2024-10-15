@@ -15,7 +15,7 @@ def reformulateBasedOnType(type_description, type_image_content, raw_description
     processed_image_content_QR = []
     if 'NL' in type_description and 'NL' in type_image_content:
         print('Both are NL types so process only once ')
-        preprocessed_description_QR = process_NL(bug_report_id, result_file_path)
+        preprocessed_description_QR = processed_image_content_QR = process_NL(bug_report_id, result_file_path)
     elif 'NL' in type_description and 'PE' in type_image_content:
         preprocessed_description_QR = process_NL (bug_report_id, result_file_path) 
         processed_image_content_QR = process_PE(image_content)
@@ -79,7 +79,6 @@ def reformulate_bug_report_content(bug_report_path, bug_report_id, baseline_resu
     print('-----------------------------',processed_image_content_QR)
     #print(type(preprocessed_title))
     #print(type(preprocessed_description_QR))
-
 
     print('Merged content')
     #print(marge_content(preprocessed_title, preprocessed_description_QR, processed_image_content_QR))

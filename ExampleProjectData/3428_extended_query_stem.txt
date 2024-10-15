@@ -1,1 +1,1 @@
-create alert alerts mvc applications user password input warning message async locked info manager sign enum task action type title exception result text abp identity tenant login email string unit role lockout
+create alert alerts mvc applications user password manager async locked sign alertlist actionresult action result friendly onpostasync exception post rememberme remember alertmanager address abp login tenant email unit role identity provider string tenancy message get info tenantid default

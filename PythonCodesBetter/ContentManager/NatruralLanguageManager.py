@@ -1,7 +1,7 @@
 
 import os
 from Utility.ReadFile import read_file_topN, read_file
-from ContentManager.ProgrammingElementManager import PE_Processor, collectorProgrammingElement
+from ContentManager.ProgrammingElementManager import PE_Processor, collectorProgrammingElement, collectorProgrammingElement_group
 
 # folder where all projects source codes are contained
 source_codes_root = "../ExampleProjectData/SourceCodes/Project3/"
@@ -13,13 +13,13 @@ def collect_code_content(file_content_list, converted_relative_path, file_path):
         
         check=0;
         extention_length=file_extension_check(file)
-        if(file == converted_relative_path and extention_length <= 3 and check<=0):
+        if(file == converted_relative_path and extention_length <= 5 and check<=0):
             #print('found')
             #print(file, converted_relative_path)
             content = read_file(file_path)
-            print(content)
+            #print(content)
             #Apply PE_Process
-            collectorProgrammingElement(content)
+            collectorProgrammingElement_group(content)
             check = 1
     return content
 
@@ -55,7 +55,7 @@ def collect_source_document_contents(directory, file_content_list):
 #return source_documents
 
 def collect_content(file_content_list):
-    print(file_content_list)
+    #print(file_content_list)
     print(source_codes_root)
     source_code_content=collect_source_document_contents(source_codes_root, file_content_list)
     #print(source_code_content)
@@ -68,6 +68,7 @@ def NL_Processor(bug_report_id, result_file_path):
     file_content_list=read_file_topN(result_file_path, bug_report_id, 10)
     print(file_content_list)
     source_codes_content=collect_content(file_content_list)
+    #print(source_codes_content)
     #Apply PE_Process
     result = PE_Processor(source_codes_content)
     return result

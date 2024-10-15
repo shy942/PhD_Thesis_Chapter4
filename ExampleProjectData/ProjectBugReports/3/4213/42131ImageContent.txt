@@ -1,0 +1,29 @@
+Tree | Path | Type | Retained bytes | Retained objects
+Whole Object Set | 2.13 GB | 41.30 M
+|  | ServiceProviderCache x1 (Microsoft.EntityFrameworkCore.Internal) | 1.54 GB | 41.30 M
+|  |  | ConcurrentDictionary<Int64, IServiceProvider> x1 (System.Collections.Concurrent) | 1.54 GB | 41.30 M
+|  |  |  | ConcurrentDictionary+Tables<Int64, IServiceProvider> x1 (System.Collections.Concurrent) | 1.54 GB | 41.30 M
+|  |  |  |  | ConcurrentDictionary+Node<Int64, IServiceProvider> x1 (System.Collections.Concurrent) | 1.54 GB | 41.30 M
+|  |  |  |  |  | ServiceProvider x1 (Microsoft.Extensions.DependencyInjection.ServiceLookup) | 1.54 GB | 41.30 M
+|  |  |  |  |  |  | DynamicServiceProviderEngine x1 (Microsoft.Extensions.DependencyInjection) | 1.54 GB | 41.30 M
+|  | MemoryCache x1 (Microsoft.Extensions.Caching.Memory) | 1.54 GB | 31.95 M
+|  |  | ConcurrentDictionary<Object, CacheEntry> x1 (System.Collections.Concurrent) | 1.54 GB | 31.95 M
+|  |  |  | ConcurrentDictionary+Tables<Object, CacheEntry> [] x1 (System.Collections.Concurrent) | 1.54 GB | 31.95 M
+|  |  |  |  | ConcurrentDictionary+Node<Object, CacheEntry> x73.8K (System.Collections.Concurrent) | 1.45 GB | 31.91 M
+|  | CacheEntry x73.8K (Microsoft.Extensions.Caching.Memory) | 1.07 GB | 31.91 M
+|  |  |  | Func<QueryContext, IAsyncEnumerable<FileStorage>> x55.0K (System) | 671.14 MB | 13.70 M
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<IssueVirtualDeviceTask>> x3.1K (System) | 55.23 MB | 1.11 M
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<ConfigureView>> x2.0K (System) | 45.56 MB | 897.3 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<ReleasedConfigure>> x2.5K (System) | 42.25 MB | 869.3 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<User>> x1.1K (System) | 38.22 MB | 759.3 K
+|  |  |  |  | Func<QueryContext, FileStorage x79 (System) | 32.22 MB | 660.1 K
+|  |  |  |  | Func<QueryContext, ReleasedConfigure x1.7K (System) | 29.25 MB | 551.4 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<ConfigureProject>> x1.2K (System) | 27.80 MB | 520.1 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<Tenant>> x974 (System) | 23.09 MB | 450.1 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<DeviceModel> x890 (System) | 17.11 MB | 451.1 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<Role>> x770 (System) | 15.49 MB | 235.1 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<Tenant>> x373 (System) | 13.08 MB | 409.1 K
+|  |  |  |  | Func<QueryContext, IAsyncEnumerable<BinaryObject>> x484 (System) | 6.34 MB | 121.5 K
+|  | ConcurrentDictionary+Node<Object, CacheEntry> x23.5 K (System.Collections.Concurrent) | 1.09 GB | 15.95 M
+|  | SqlServerCompiledQueryCacheKey+Generator+SqlServerCompiledQueryCacheKey x7 (System.Collections.Generic) | 31.81 MB | 14.86 M
+|  | Smaller objects | | 1.30 MB | 36.80 K
