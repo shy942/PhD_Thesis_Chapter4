@@ -6,7 +6,7 @@ def process_ST():
 
 def process_PE(text):
     result=[]
-    print('Process Programming Element')
+    print('Let us process Programming Element')
     result=PE_Processor(text)
     return result
 

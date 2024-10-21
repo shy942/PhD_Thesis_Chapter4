@@ -12,13 +12,17 @@ def sortPageRankScore (node_to_index, pagerank_score, topN):
     #print(sorted_pagerank_score_merged)
     
     sorted_result=[] #This list will contain the tokens only
+    pr_score=[]
+    
     # print top-N results
     if(len(sorted_pagerank_score_merged)<topN):
         for i in range(0, len(sorted_pagerank_score_merged), 1):
             #print(sorted_pagerank_score_merged[i][0], end = ' ')
             sorted_result.append(sorted_pagerank_score_merged[i][0])
+            pr_score.append(sorted_pagerank_score_merged[i][1])
     else:
         for i in range(0, topN , 1):
             #print(sorted_pagerank_score_merged[i][0], end = ' ')
             sorted_result.append(sorted_pagerank_score_merged[i][0])
-    return sorted_result
+            pr_score.append(sorted_pagerank_score_merged[i][1])
+    return sorted_result, pr_score

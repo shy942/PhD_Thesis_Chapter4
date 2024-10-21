@@ -92,6 +92,7 @@ def PE_Processor(text):
     pagerank_score = pagerank(np.array(co_matrix), num_nodes)
     #print(pagerank_score)
     # Sort pagerank score
-    result = sortPageRankScore (node_to_index, pagerank_score, 20)
+    result, score = sortPageRankScore (node_to_index, pagerank_score, 10)
     print(result)
+    print(score)
     return result
